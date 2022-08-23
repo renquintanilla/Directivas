@@ -2,7 +2,15 @@
   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga rerum expedita consectetur adipisci sed alias porro saepe placeat, unde inventore optio ratione tempora aperiam ducimus accusantium sapiente repudiandae odit nobis?
 </p>
 <div>
-    <button (click)=Verde</button>
-    <button (click)=>Rojo</button>
-    <button (click)=>Amarillo</button>
+    <button (click)="onClick('V')">Verde</button>
+    <button (click)="onClick('A')">Amarillo</button>
+    <button (click)="onClick('R')">Rojo</button>
+</div>
+
+<div>
+  <input type="text" [(ngModel)] = "propiedadesParrafo.color">
+</div>
+
+<div>
+  <input type="range" min="12" max="120" step="2" (change)="onChange($event)">
 </div>

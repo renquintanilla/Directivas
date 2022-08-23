@@ -15,4 +15,24 @@ export class AppComponent {
       fontSize: '24px' 
     }
   }
+
+  onClick(pColor: string){
+    switch(pColor) {
+      case 'V': 
+        this.propiedadesParrafo.color = "green";
+        break;
+      case 'R': 
+        this.propiedadesParrafo.color = "red";
+        break;  
+      case 'A': 
+        this.propiedadesParrafo.color = "yellow";
+        break;  
+    
+    }
+  }
+
+  onChange($event: any){
+    this.propiedadesParrafo.fontSize = `${$event.target.value}px`;
+  }
+
 }
