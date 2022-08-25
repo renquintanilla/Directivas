@@ -10,28 +10,28 @@ export class AppComponent {
   propiedadesParrafo: any;
 
   constructor() {
-    this.propiedadesParrafo = { 
-      color: 'red', 
-      fontSize: '24px' 
+    this.propiedadesParrafo = {
+      color: 'green',
+      fontSize: '24px'
     }
   }
 
   onClick(pColor: string){
     switch(pColor) {
-      case 'V': 
+      case 'V':
         this.propiedadesParrafo.color = "green";
         break;
-      case 'R': 
+      case 'R':
         this.propiedadesParrafo.color = "red";
-        break;  
-      case 'A': 
+        break;
+      case 'A':
         this.propiedadesParrafo.color = "yellow";
-        break;  
-    
+        break;
+
     }
   }
 
-  onChange($event: any){
+  onInput($event: any){
     this.propiedadesParrafo.fontSize = `${$event.target.value}px`;
   }
 

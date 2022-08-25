@@ -1,3 +1,5 @@
+<app-semaforo></app-semaforo>
+
 <p [ngStyle]="propiedadesParrafo">
   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga rerum expedita consectetur adipisci sed alias porro saepe placeat, unde inventore optio ratione tempora aperiam ducimus accusantium sapiente repudiandae odit nobis?
 </p>
@@ -12,5 +14,5 @@
 </div>
 
 <div>
-  <input type="range" min="12" max="120" step="2" (change)="onChange($event)">
+  <input type="range" min="12" max="120" step="2" (input)="onInput($event)">
 </div>
