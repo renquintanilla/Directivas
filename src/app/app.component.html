@@ -16,3 +16,15 @@
 <div>
   <input type="range" min="12" max="120" step="2" (input)="onInput($event)">
 </div>
+
+<!--  <div>   Primera forma de hacerlo
+  <p *ngIf="mostrar">Párrafo a mostrar con botón y directiva *ngIf</p>
+  <button (click)="onClickMostrar()">Mostrar/Ocultar</button>
+</div> --> 
+
+<div>   <!-- Segunda forma de hacerlo-->
+  <p *ngIf="mostrar">Primer Párrafo a mostrar directiva *ngIf=mostrar</p>
+  <p *ngIf="!mostrar">Segundo Párrafo a mostrar directiva *ngIf=!mostrar</p>
+  <button (click)="onClickMostrar()">Mostrar/Ocultar</button>
+</div>
+

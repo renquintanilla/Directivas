@@ -9,11 +9,15 @@ export class AppComponent {
 
   propiedadesParrafo: any;
 
+  mostrar: boolean;
+
   constructor() {
     this.propiedadesParrafo = {
       color: 'green',
       fontSize: '24px'
     }
+
+    this.mostrar = true;
   }
 
   onClick(pColor: string){
@@ -35,4 +39,8 @@ export class AppComponent {
     this.propiedadesParrafo.fontSize = `${$event.target.value}px`;
   }
 
+
+  onClickMostrar() {
+    this.mostrar = !this.mostrar;
+  }
 }
