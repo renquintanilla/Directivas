@@ -21,7 +21,17 @@ export class SemaforoComponent implements OnInit {
    }
 
   ngOnInit(): void {
-setInternval(() => {},1000)
+
+   setInterval(() => {
+      if (this.colorSeleccionado==='r')
+      {
+        this.colorSeleccionado='v';
+      } else if(this.colorSeleccionado==='v'){
+        this.colorSeleccionado='a';
+      } else if(this.colorSeleccionado==='a') {
+        this.colorSeleccionado='r';
+      }
+    },1000)
 
   }
 
