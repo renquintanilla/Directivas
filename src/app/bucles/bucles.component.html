@@ -1,0 +1,36 @@
+<button (click)="onClick()">Agregar Persona</button>
+<div class="personas">
+    <div class="persona" *ngFor="let per of personas">
+        <h3 [ngStyle]="resaltatexto">{{ per.nombre }} {{ per.apellidos }}</h3>
+        <p>{{ per.calle }}</p>
+        <p>{{ per.telefono }}</p>
+    </div>
+</div>
+
+<h4>Otra forma de presentrlo (Tabla)</h4>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Dirección</th>
+            <th>Teléfono</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let per of personas">
+            <td>{{ per.nombre }}</td>
+            <td>{{ per.apellidos }}</td>
+            <td>{{ per.calle }}</td>
+            <td>{{ per.telefono }}</td>
+        </tr>
+    </tbody>
+</table>
+<!-- <h2>Listado de Personas</h2>   
+<ul>
+    <li *ngFor="let persona of personas">
+        {{ persona.nombre }} {{ persona.apellidos }} {{ persona.edad }}
+    </li>
+</ul>
+ -->
